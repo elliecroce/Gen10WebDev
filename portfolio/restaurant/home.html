@@ -11,7 +11,19 @@ Assignment: Restaurant Site
 <html lang="en">
 
     <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
         <title>Chez Ellie</title>
+        
+        <!-- Bootstrap CDN copied from  https://getbootstrap.com/docs/4.1/getting-started/introduction/  -->
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+        
+        <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+        
     </head>
 
     <body>
@@ -21,24 +33,30 @@ Assignment: Restaurant Site
         </header>
     
         <nav>
-            <a href="home.html" style="margin-right: 30px">Home</a>
-            <a href="menu.html" style="margin-right: 30px">Menu</a>
-            <a href="contact.html">Contact Us</a>
-            <hr />
+            <a class="btn badge-pill" href="home.html" style="margin-right: 30px">Home</a>
+            <a class="btn badge-pill" href="menu.html" style="margin-right: 30px">Menu</a>
+            <a class="btn badge-pill" href="contact.html">Contact Us</a>
         </nav>
     
-        <section style="max-width: 400px; margin: auto;">
-            <img src="noodles.jpg" alt="Noodles from Chez Ellie">
-            
-            <p style="text-align: left;"><b>Restaurant Description</b> <br />
-            Welcome to Chez Ellie, a hip new spot to warm up on a cold day. Rain, snow, or sun we will always bring a smile to your face and your heart with our hearty soups and noodle bowls. We also have a full wine menu and local brews to warm you up even more! </p> 
-        </section>
-        
-        <hr />
+    
+        <p style="text-align: center">
+            <img src="noodles.jpg" alt="Noodles from Chez Ellie" >
+        </p>
+
+        <p style="text-align:left; max-width: 400px; margin:auto; padding-bottom: 20px;"><b>Restaurant Description</b> <br />
+        Welcome to Chez Ellie, a hip new spot to warm up on a cold day. Rain, snow, or sun we will always bring a smile to your face and your heart with our hearty soups and noodle bowls. We also have a full wine menu and local brews to warm you up even more! </p> 
+
         <footer style="text-align: center">
             <p>42 Wallaby Way, Sydney, Australia, 12345</p>
             <p>(612)123-4567</p>
         </footer>
+        
+        
+        <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
     </body>
 
 

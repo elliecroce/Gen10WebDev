@@ -1,0 +1,37 @@
+/*
+    Name: Elliane Croce
+    Date Created: 10/15/2018
+    Most recent revision: 
+*/
+
+body {
+    background-color: darksalmon;
+}
+
+header, footer {
+    background-color: wheat;  
+}
+
+header {
+    font-family: monospace;
+}
+
+nav .btn{
+    background-color: wheat;
+    color: black;  
+    margin-bottom: 20px;
+}
+
+a:visited {
+    color: cornflowerblue;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+
