@@ -4,7 +4,7 @@
     Most recent revision:
 */
 
-
+/*
 function countingCharacters(stringToCount) {
     console.log(stringToCount + " has " + stringToCount.length + " characters.");
 }
@@ -34,4 +34,20 @@ function countingChar3(str, search){
     }
     
     return count;
+} */
+
+
+
+function rollDice() {
+    return Math.floor(Math.random *6) + 1;
 }
+
+for (var i=0; i<100; i++) {
+    console.log(rollDice())
+}
+
+function addTwoNumbers(firstNumber, secondNumber){
+    var sumNumbers = firstNumber + secondNumber;
+    return sumNumbers; 
+}
+
