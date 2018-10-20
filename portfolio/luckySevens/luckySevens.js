@@ -16,7 +16,6 @@ function resetForm() {
 
 function rollDice(){
     clearErrors();
-    
     var sb = document.forms["sevens"]["bet1"].value;
     
     if (sb == "" || isNaN(sb) || sb <= 0){
@@ -44,7 +43,6 @@ function rollDice(){
             gameMoney--;
             totalRolls++;
         }
-        
         if(highAmount <= gameMoney){
             highAmount = gameMoney;
             highRollCount = totalRolls;

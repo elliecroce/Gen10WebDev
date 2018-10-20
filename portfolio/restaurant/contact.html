@@ -3,7 +3,7 @@
 <!--     
 Name: Elliane Croce
 Date Created: 10/8/2018
-Most recent revision: 10/15/2018
+Most recent revision: 10/20/2018
 
 Assignment: Restaurant Site
 -->
@@ -16,34 +16,44 @@ Assignment: Restaurant Site
         
         <title>Chez Ellie Contact</title>
         
+        <script type="text/JavaScript" src="restaurant.js"></script>
+        <noscript> 
+        <style type="text/css">
+            .all {display:none;}
+        </style>
+        <div class="noscriptmsg" style="color: white;">
+            This site is best viewed with JavaScript enabled! Go to your browser settings to fix this.
+        </div>
+        </noscript>
         <!-- Bootstrap CDN copied from  https://getbootstrap.com/docs/4.1/getting-started/introduction/  -->
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         
-         <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+        <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+        
         
         <style>
-        
             input, textarea, #inquiry{
                 width: 200px;
                 margin-bottom: 20px;
             }
-    
             .labels {
                 width: 250px; 
                 float: left; 
                 text-align: right; 
                 padding-right: 10px   
             }
-            
             .required{
                 font-weight: bold;
             }
-            
             .custInput {
                 max-width: 600px;
                 margin: auto;
+                background-color:#7e9a8a; 
+                padding-top: 20px;
+                margin-bottom: 20px;
             }
             
             .test input {
@@ -53,31 +63,38 @@ Assignment: Restaurant Site
     </head>
 
     <body>
-        
+        <div class="all">
         <header>
-            <h1  style="text-align: center"> Chez Ellie </h1>
+            <h1> Chez Ellie </h1>
         </header>
     
         <nav>
-            <a class="btn badge-pill" href="home.html" style="margin-right: 30px">Home</a>
+            <a class="btn badge-pill" href="home.html" style="margin-right: 30px">Home 
+                <span class="fa fa-home"></span>
+            </a>
             <a class="btn badge-pill" href="menu.html" style="margin-right: 30px">Menu</a>
             <a class="btn badge-pill" href="contact.html">Contact Us</a>
         </nav>
-    
+        
+        
         <div class="custInput">
-            <form action="submit.html" method="POST">
-                
-                <div class="required">
-                    <label class="labels" for="fullName">Name: </label> 
-                    <input type="text" id="fullName" name="fullName" required>
-                
-                    <label class="labels" for="eMail">Email:</label>
-                    <input type="text" id="eMail" name="eMail" required>
-               
-                    <label class="labels" for="phone">Phone:</label>
-                    <input type="text" id="phone" name="phone" required>
-               </div>
-                
+            <div class="container">
+                <form name="userInfo" onsubmit="return validateItems();" class="form">
+                    <div class="required">
+                        <div class="form-group">
+                            <label class="labels" for="fullName">Name: </label> 
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="labels" for="eMail">Email:</label>
+                            <input type="text" id="eMail" name="eMail" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="labels" for="phone">Phone:</label>
+                            <input type="text" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
                     <label class="labels" for="inquiry">Reason for Inquiry:</label>
 
                     <select id="inquiry" name="inquiry">
@@ -86,60 +103,56 @@ Assignment: Restaurant Site
                         <option value="feedback">Feedback</option>
                         <option value="other">Other</option>
                     </select>
-            
+
 
                     <label class="labels" for="info">Additional Information</label>
                     <textarea id="info" name="info"></textarea>
 
-                <div class="test">
-                    
-                    <label class="labels" for="been">Have you been to the restaurant?</label>
+                    <div class="test">
 
-                    <input type="radio" id="choice1" name="been" value="No" default>
-                    <label for="choice1" style="padding-right: 20px">No</label>
+                        <label class="labels" for="been">Have you been to the restaurant?</label>
 
-                    <input type="radio" id="choice2" name="been" value="Yes">
-                    <label for="choice2">Yes</label>
+                        <input type="radio" id="choice1" name="been" value="No" default>
+                        <label for="choice1" style="padding-right: 20px">No</label>
 
+                        <input type="radio" id="choice2" name="been" value="Yes">
+                        <label for="choice2">Yes</label>
+
+                        <br />
+
+                        <label class="labels" for="contact">Best days to contact you:</label>
+
+                        <div class="checkboxes">
+                            <input type="checkbox" id="M" name="contact" value="M">
+                            <label for="M" style="padding-right: 15px">M</label>
+                            <input type="checkbox" id="T" name="contact" value="T">
+                            <label for="T" style="padding-right: 15px">T</label>
+                            <input type="checkbox" id="W" name="contact" value="W">
+                            <label for="W" style="padding-right: 15px">W</label>
+                            <input type="checkbox" id="Th" name="contact" value="Th">
+                            <label for="Th" style="padding-right: 15px">Th</label>
+                            <input type="checkbox" id="F" name="contact" value="F">
+                            <label for="F" >F</label>
+                       </div>
+                    </div>
+
+                    <div style="text-align: center">
+                        <button type="submit" id="submit" class="btn" name="submit" value="Send Request">Submit Request </button>
+                    </div>
                     <br />
-
-                    <label class="labels" for="contact">Best days to contact you:</label>
-
-                    <div class="checkboxes">
-                        <input type="checkbox" id="M" name="contact" value="M">
-                        <label for="M" style="padding-right: 15px">M</label>
-                        <input type="checkbox" id="T" name="contact" value="T">
-                        <label for="T" style="padding-right: 15px">T</label>
-                        <input type="checkbox" id="W" name="contact" value="W">
-                        <label for="W" style="padding-right: 15px">W</label>
-                        <input type="checkbox" id="Th" name="contact" value="Th">
-                        <label for="Th" style="padding-right: 15px">Th</label>
-                        <input type="checkbox" id="F" name="contact" value="F">
-                        <label for="F" >F</label>
-                   </div>
-                
-                </div>
-                
-                <div style="text-align: center">
-                    <input type="submit" name="submit" value="Send Request">
-                </div>
-                
-                <br />
-            </form>
+                </form>
+            </div>
         </div>
-        
    
-        <footer style="text-align: center">
+        <footer>
             <p>42 Wallaby Way, Sydney, Australia, 12345</p>
             <p>(612) 123-4567</p>
         </footer>
-        
-        
         
         <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        
+        </div>
     </body>
 </html>

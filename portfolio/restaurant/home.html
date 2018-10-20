@@ -3,50 +3,88 @@
 <!--     
 Name: Elliane Croce
 Date Created: 10/8/2018
-Most recent revision: 10/15/2018
+Most recent revision: 10/20/2018
 
 Assignment: Restaurant Site
 -->
 
 <html lang="en">
-
     <head>
-        
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
+        <noscript> 
+        <style type="text/css">
+            .all {display:none;}
+        </style>
+        <div class="noscriptmsg" style="color: white;">
+            This site is best viewed with JavaScript enabled! Go to your browser settings to fix this.
+        </div>
+        </noscript>
+        
         <title>Chez Ellie</title>
-        
-        <!-- Bootstrap CDN copied from  https://getbootstrap.com/docs/4.1/getting-started/introduction/  -->
-        
+            
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        
+    
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         
         <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
-        
+
+        <style>
+            .container {
+                width: 400px;
+            }
+        </style>
     </head>
 
     <body>
         <header>
             <h1  style="text-align: center"> Chez Ellie </h1>
-            <hr />
         </header>
     
+        <div class="jumbotron">
+            <h4> Come visit us at our new location in Montreal! Located where the Veggie L'Gros Luxe restaurant used to be!</h4>
+        </div>
+        
         <nav>
-            <a class="btn badge-pill" href="home.html" style="margin-right: 30px">Home</a>
-            <a class="btn badge-pill" href="menu.html" style="margin-right: 30px">Menu</a>
+            <a class="btn badge-pill" href="home.html" style="margin-right: 30px">Home 
+                <span class="fa fa-home"></span>
+            </a>
+            <a class="btn badge-pill" href="menu.html" style="margin-right: 30px;">Menu</a>
             <a class="btn badge-pill" href="contact.html">Contact Us</a>
         </nav>
     
-    
-        <p style="text-align: center">
+        
+        <p style="text-align: center;">
             <img src="noodles.jpg" alt="Noodles from Chez Ellie" >
         </p>
-
-        <p style="text-align:left; max-width: 400px; margin:auto; padding-bottom: 20px;"><b>Restaurant Description</b> <br />
-        Welcome to Chez Ellie, a hip new spot to warm up on a cold day. Rain, snow, or sun we will always bring a smile to your face and your heart with our hearty soups and noodle bowls. We also have a full wine menu and local brews to warm you up even more! </p> 
-
-        <footer style="text-align: center">
+        <div class="container justify-content-center">
+            <div class="row">
+                <div class="col" id="descr">
+                    <p ><b>Restaurant Description</b> <br/> 
+                    Welcome to Chez Ellie, a hip new spot to warm up on a cold day. Rain, snow, or sun we will always bring a smile to your face and your heart with our hearty soups and noodle bowls. We also have a monthly specials drinks and new menus for each season! </p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="newInfo" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="d-block w-100">We are opening a new location! Although we love it here in Australia we have always wanted to expand abroad. Our new spot will be in the Mile End neighborhood of Montreal. Stay tuned for more details!</p>
+                </div>
+                <div class="carousel-item">
+                    <p class="d-block w-100">Our new Fall menu has recently lauched. We have included lots of warm items to keep your bellies happy and to help your bodies thaw from this cold weather! Stop in to try it this week!</p>
+                </div>
+                <div class="carousel-item">
+                    <p class="d-block w-100">Chez Ellie experiments each month with a fun cocktail or beer. October's Drink of the Month is our new SG Special Brew which incorporates all the things you love about fall: pumpkin, candy, and apples. Intrigued? Come on in and give it a taste!</p>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <footer>
             <p>42 Wallaby Way, Sydney, Australia, 12345</p>
             <p>(612)123-4567</p>
         </footer>
@@ -55,9 +93,6 @@ Assignment: Restaurant Site
         <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>   
     </body>
-
-
 </html>

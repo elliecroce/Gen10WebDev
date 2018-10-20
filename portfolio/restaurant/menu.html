@@ -3,140 +3,149 @@
 <!--     
 Name: Elliane Croce
 Date Created: 10/8/2018
-Most recent revision: 10/15/2018
+Most recent revision: 10/20/2018
 
 Assignment: Restaurant Site
 -->
 
 <html lang="en">
-
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
-        <title>Chez Ellie Menu</title>
+        <noscript> 
+        <style type="text/css">
+            .all {display:none;}
+        </style>
+        <div class="noscriptmsg" style="color: white;">
+            This site is best viewed with JavaScript enabled! Go to your browser settings to fix this.
+        </div>
+        </noscript>
         
-        <!-- Bootstrap CDN copied from  https://getbootstrap.com/docs/4.1/getting-started/introduction/  -->
+        <title>Chez Ellie Menu</title>
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         
         <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
         
-        <style>
-        
-            table {
-                background-color: #71c797;
-                width: 800px; 
+        <style> /*Requirement for Menu to be internal stylesheet*/
+    
+            
+            .food {
+                background-color: #7e9a8a;
+                max-width:  800px; 
                 margin: auto; 
                 border-spacing: 20px 0px; 
                 text-align: center;
                 margin-bottom: 40px;
+                padding-top: 20px;
             }
             
             #bev {
                 text-align: left;
-                width: 400px;
+                width: 300px;
+                background-color: #7e8a8a;
+                margin:auto;
+                margin-bottom: 20px;
             }
-        
+            
             th {
                 font-size: 1.3em;
             }
-            
             table, th, td {
                 padding: 5px 10px;
             }
             
             #bev tr:nth-child(odd){
-                background-color: #82cea4;
+                background-color: #7e9a8a;
             }
-            
-        </style>
-        
+        </style>  
     </head>
 
     <body>
         <header>
-            <h1  style="text-align: center"> Chez Ellie </h1>
+            <h1> Chez Ellie </h1>
         </header>
     
         <nav>
-            <a class="btn badge-pill" href="home.html" style="margin-right: 30px">Home</a>
+            <a class="btn badge-pill" href="home.html" style="margin-right: 30px">Home 
+                <span class="fa fa-home"></span>
+            </a>
             <a class="btn badge-pill" href="menu.html" style="margin-right: 30px">Menu</a>
             <a class="btn badge-pill" href="contact.html">Contact Us</a>
         </nav>
     
+        <div class="container-fluid">
+            <div class="food">
+                <div class="row">
+                    <div class="col">
+                        <h3>Beef Pho</h3>
+                        <em>Yum Yum in my Tum Tum</em>
+                        <p>Delicious broth with noodles, veggies, coriander, sprouts, beef and fresh lime. Add sriracha for an extra kick.</p>
+                        <p>$8.00</p>
+                    </div>
+                    <div class="col">
+                        <h3>Tofu Pho</h3>
+                        <em>We get it, you're Vegan</em>
+                        <p>The exact same thing as the Beef Pho but without the beef. Recommended for those that don't eat meat or any animals. Ever.</p>
+                        <p>$7.50</p>
+                    </div>
+                    <div class="col">
+                        <h3>Veggie Curry</h3>
+                        <em>When you need a little spice</em>
+                        <p>All the indgredients you would imagine would be in a curry. We can add meat if you want, but this is supposed to just be veggies.</p>
+                        <p>$8.00</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Papaya Salad</h3>
+                        <em>When you need a little spice</em>
+                        <p>Green Papaya, originally from Thailand, this recipe is amazing. Made even more famous by Chrissy Teigen's mom Pepper Thai.</p>
+                        <p>$8.00</p>
+                    </div>
+                    <div class="col">
+                        <h3>Pad Thai</h3>
+                        <em>Very good noodles, no broth</em>
+                        <p>Also a Thai dish, doesn't come with broth but there are scrambled eggs and you can choose whatever protein you would like to add!</p>
+                        <p>$9.00</p>
+                    </div>
+                    <div class="col">
+                        <h3>Chicken Fingers</h3>
+                        <em>For those that don't like change</em>
+                        <p>Chicken. Not their fingers, but shaped to look like them. No judgement if you're over 12 and you order these.</p>
+                        <p>$10.00</p>
+                    </div>
+                </div>
+            </div>
         
-          
-        <table>
-            <tr>
-                <th>Beef Pho</th>
-                <th>Tofu Pho</th>
-                <th>Veggie Curry</th>
-            </tr>
-            <tr >
-                <td><em>Yum Yum in my Tum Tum</em></td>
-                <td><em>We get it, you're Vegan</em></td>
-                <td><em>When you need a little spice</em></td>
-            </tr>
-            <tr>
-                <td>Delicious broth with noodles, veggies, coriander, sprouts, beef and fresh lime. Add sriracha for an extra kick.</td>
-                <td>The exact same thing as the Beef Pho but without the beef. Recommended for those that don't eat meat or any animals. Ever.</td>
-                <td>IAll the indgredients you would imagine would be in a curry. We can add meat if you want, but this is supposed to just be veggies.</td>
-            </tr>
-            <tr>
-                <td>$8.00</td>
-                <td>$7.50</td>
-                <td>$8.00</td>
-            </tr>
 
-
-            <tr>
-                <th>Papaya Salad</th>
-                <th>Pad Thai</th>
-                <th>Chicken Fingers</th>
-            </tr>
-            <tr >
-                <td><em>Only cold thing on the menu</em></td>
-                <td><em>Very good noodles, no broth</em></td>
-                <td><em>For those that don't like change</em></td>
-            </tr>
-            <tr>
-                <td>Green Papaya, originally from Thailand, this recipe is amazing. Made even more famous by Chrissy Teigen's mom Pepper Thai.</td>
-                <td>Also a Thai dish, doesn't come with broth but there are scrambled eggs and you can choose whatever protein you would like to add!</td>
-                <td>Chicken. Not their fingers, but shaped to look like them. No judgement if you're over 12 and you order these.</td>
-            </tr>
+            <table id="bev">
              <tr>
-                <td>$8.00</td>
-                <td>$9.00</td>
-                <td>$20.00</td>
-            </tr>
-        </table>
-
-
-        <table id="bev">
-            <tr>
-                <th colspan="2">Beverages</th>
-            </tr>
-            <tr>
-                <td>Root Beer</td>
-                <td>$3.00</td>
-            </tr>
-            <tr>
-                <td>Bottled Water</td>
-                <td>$1.25</td>
-            </tr>
-            <tr>
-                <td>Lemonade</td>
-                <td>$1.00</td>
-            </tr>
-            <tr>
-                <td>Iced Tea</td>
-                <td>$1.25</td>
-            </tr>
-        </table>
-           
-        <footer style="text-align: center">
+                 <th colspan="2">Beverages</th>
+             </tr>
+             <tr>
+                 <td>Root Beer</td>
+                 <td>$3.00</td>
+             </tr>
+             <tr>
+                 <td>Bottled Water</td>
+                 <td>$1.25</td>
+             </tr>
+             <tr>
+                 <td>Lemonade</td>
+                 <td>$1.00</td>
+             </tr>
+             <tr>
+                 <td>Iced Tea</td>
+                 <td>$1.25</td>
+             </tr>
+         </table> 
+        </div>
+        
+        <footer>
             <p>42 Wallaby Way, Sydney, Australia, 12345</p>
             <p>(612)123-4567</p>
         </footer>
@@ -145,7 +154,6 @@ Assignment: Restaurant Site
         <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
     </body>
 </html>
