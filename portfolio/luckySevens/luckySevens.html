@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<!-- 
+    Name: Elliane Croce
+    Date Created: 10/19/2018
+    Most recent revision:
+-->
+
+<html lang="en">
+
+    <head>
+       
+        <script type="text/JavaScript" src="luckySevens.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet" type="text/css" />
+        
+        <style>
+            h1 {
+                text-align: center;
+            }
+            
+            form, #results {
+                max-width: 400px;
+                margin:auto;
+            }
+            
+            .btnStyle {
+                text-align: center;
+            }
+            
+        </style>
+        
+         <title>Lucky Sevens</title>
+        
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Lucky Sevens</h1> <!--center this -->
+
+            <form name="sevens" onsubmit="return rollDice();" onreset="resetForm();" class="form-inline">
+                <div class="form-group">
+                    <label for="bet1">Starting Bet: </label>
+                    <input type="number" class="form-control" id="bet1">
+                </div>
+                <div class="btnStyle">
+                    <button type="submit" id="playButton" class="btn">Play</button>
+                    <button type="reset" id="resetButton" class="btn" style="display:none;">Play Again</button>
+                </div>
+            </form>
+
+            <div id="results" style="display:none;">
+                <hr />
+                <h1> Results</h1>
+                <table id="table" class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td>Starting Bet</td>
+                            <td>$<span id="startBet"></span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Total Rolls Before Going Broke</td>
+                            <td><span id="totalRoll"></span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Highest Amount Won</td>
+                            <td>$<span id="highestWon"></span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Roll Count at Highest Amount Won</td>
+                            <td><span id="rollHigh"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+
+
+</html>
